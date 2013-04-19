@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "php": ">=5.5-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-        "files": ["src/G/string.php"]
+        "files": ["src/G/string.php"],
+        "psr-0": { "G": "src/"}
     }
 }

@@ -171,12 +171,12 @@ function crypt(\Iterator $str, string $salt = null) {
  * @param  \Iterator $str Iterator over the strings
  * @return \Generator Strings that were echoed
  */
-function echo(\Iterator $str) {
+/*function echo_(\Iterator $str) {
 	foreach ($str as $item) {
-		\echo($item);
+		echo($item);
 		yield $item;
 	}
-}
+}*/
 
 /**
  * Returns an array of strings, each of which is a substring of
@@ -255,7 +255,7 @@ function hex2bin(\Iterator $data) {
  * @param  string    $encoding Encoding to use. If omitted, the default value for this argument is UTF-8
  * @return \Generator Generator yielding decoded strings
  */
-function html_entity_decode(\Iterator $string, $flags = ENT_COMPAT | ENT_HTML401, $encoding = 'UTF-8') {
+function html_entity_decode(\Iterator $string, $flags = (ENT_COMPAT | ENT_HTML401), $encoding = 'UTF-8') {
 	foreach($string as $item) {
 		yield \html_entity_decode($item, $flags, $encoding);
 	}
